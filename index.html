@@ -31,6 +31,16 @@
   src="https://www.facebook.com/tr?id=1360688069260849&ev=PageView&noscript=1"/></noscript>
 <!-- ══════════════════ FINE META PIXEL ══════════════════ -->
 
+<!-- ════════════════ MICROSOFT CLARITY ════════════════ -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "x9mnosrh0o");  /* ← inserire qui il Project ID di Clarity */
+</script>
+<!-- ══════════════ FINE MICROSOFT CLARITY ══════════════ -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -195,6 +205,22 @@ h2.display{font-size:clamp(2rem,6.5vw,3.4rem);margin:.5rem 0 .9rem}
 .infocard dd{color:inherit}
 .infocard .btn-wa{margin-top:1.1rem}
 
+/* sezioni novità (canto/cartapesta): più spazio + gerarchia chiara */
+.course--novita{padding-block:5rem}
+.course--novita h2.display{margin-bottom:1.1rem}
+
+/* blocco docente — credibilità, secondario */
+.docente{margin:0 0 1.4rem;padding-left:.95rem;border-left:3px solid var(--accent);font-size:.92rem;line-height:1.5;color:rgba(26,34,56,.78)}
+.docente .lbl{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:.25rem}
+.docente b{font-weight:700;color:var(--ink)}
+
+/* blocco prova gratuita — azione, primario */
+.cta-prova{margin:1.6rem 0 0;padding:1.4rem;border-radius:18px;border:1.5px solid var(--accent);background:var(--panna);background:color-mix(in srgb, var(--accent) 12%, var(--panna))}
+.cta-prova__lbl{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--accent);margin:0 0 .35rem}
+.cta-prova__head{font-size:1.15rem;font-weight:700;line-height:1.3;color:var(--ink);margin:0 0 .4rem}
+.cta-prova__note{font-size:.86rem;line-height:1.5;color:rgba(26,34,56,.72);margin:0 0 1.2rem}
+.cta-prova .btn-wa{margin:0}
+
 /* video (verticale, dimensioni reali 303×540) */
 .video-shell{display:flex;justify-content:center;margin-bottom:1.5rem}
 .video-frame{position:relative;width:100%;max-width:320px;aspect-ratio:303/540;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 16px 44px rgba(26,34,56,.20)}
@@ -337,7 +363,7 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
 </section>
 
 <!-- ════════════════════ 3.3 CANTO ════════════════════ -->
-<section id="canto" class="course" style="--accent:var(--turchese);--on-accent:#fff">
+<section id="canto" class="course course--novita" style="--accent:var(--turchese);--on-accent:#fff">
   <div class="wrap">
     <div class="course__media">
       <div class="video-shell">
@@ -352,7 +378,8 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
     <div class="course__body">
       <span class="tag"><span class="new">Novità</span> 8–12 anni</span>
       <h2 class="display">Laboratorio di Canto</h2>
-      <p class="lead">Un pomeriggio a settimana per scoprire la propria voce: respirazione, intonazione, canto insieme agli altri. A guidarlo è Susanna Recupero. A fine percorso, un momento aperto alle famiglie per ascoltare cosa è nato.</p>
+      <p class="docente"><span class="lbl">Docente</span><b>Susanna Recupero</b> — soprano, diplomata in canto lirico al Conservatorio V. Bellini di Catania, perfezionata con maestri come Marcello Giordani.</p>
+      <p class="lead">Un pomeriggio a settimana per scoprire la propria voce: respirazione, intonazione, canto insieme agli altri. A fine percorso, un momento aperto alle famiglie per ascoltare cosa è nato.</p>
       <div class="infocard">
         <dl>
           <dt>Età:</dt><dd>8–12 anni</dd>
@@ -360,8 +387,13 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
           <dt>Inizio:</dt><dd>Seconda settimana di luglio</dd>
           <dt>Dove:</dt><dd>Il Casale — via P. L. Deodato 120, San Giovanni La Punta</dd>
         </dl>
-        <a class="btn-wa btn-wa--sm wa-link" href="https://wa.me/393501047318" target="_blank" rel="noopener">
-          <svg class="ico"><use href="#ico-wa"/></svg> Chiedi info su questo laboratorio
+      </div>
+      <div class="cta-prova">
+        <p class="cta-prova__lbl">Prova gratuita</p>
+        <p class="cta-prova__head">All'Open Day di mercoledì 1 luglio</p>
+        <p class="cta-prova__note">È uno dei primi gruppi: posti limitati, perché vogliamo seguirli bene.</p>
+        <a class="btn-wa wa-link" data-wa-msg="Ciao! Vorrei prenotare la prova gratuita di Canto all'Open Day di mercoledì 1 luglio." href="https://wa.me/393501047318" target="_blank" rel="noopener">
+          <svg class="ico"><use href="#ico-wa"/></svg> Prenota la prova gratuita
         </a>
       </div>
     </div>
@@ -369,7 +401,7 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
 </section>
 
 <!-- ════════════════════ 3.4 CARTAPESTA ════════════════════ -->
-<section id="cartapesta" class="course course--rev" style="--accent:var(--fucsia);--on-accent:#fff">
+<section id="cartapesta" class="course course--rev course--novita" style="--accent:var(--fucsia);--on-accent:#fff">
   <div class="wrap">
     <div class="course__media">
       <figure class="figure">
@@ -380,7 +412,8 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
     <div class="course__body">
       <span class="tag"><span class="new">Novità</span> 8–14 anni</span>
       <h2 class="display">Laboratorio di Cartapesta</h2>
-      <p class="lead">Giornali, colla, colore: dieci incontri per imparare un mestiere antico e costruire con le proprie mani gli oggetti di scena di uno spettacolo vero. Quello che si crea qui, a fine estate sale sul palco. Conduce Serena Viviana Siclari, costumista diplomata all'Accademia di Belle Arti di Catania.</p>
+      <p class="docente"><span class="lbl">Docente</span><b>Serena Siclari</b> — costumista diplomata all'Accademia di Belle Arti di Catania, specializzata in costume teatrale e cinematografico.</p>
+      <p class="lead">Giornali, colla, colore: dieci incontri per imparare un mestiere antico e costruire con le proprie mani gli oggetti di scena di uno spettacolo vero. Quello che si crea qui, a fine estate sale sul palco.</p>
       <div class="infocard">
         <dl>
           <dt>Età:</dt><dd>8–14 anni</dd>
@@ -388,8 +421,13 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
           <dt>Inizio:</dt><dd>Seconda settimana di luglio</dd>
           <dt>Dove:</dt><dd>Il Casale — via P. L. Deodato 120, San Giovanni La Punta</dd>
         </dl>
-        <a class="btn-wa btn-wa--sm wa-link" href="https://wa.me/393501047318" target="_blank" rel="noopener">
-          <svg class="ico"><use href="#ico-wa"/></svg> Chiedi info su questo laboratorio
+      </div>
+      <div class="cta-prova">
+        <p class="cta-prova__lbl">Prova gratuita</p>
+        <p class="cta-prova__head">All'Open Day di mercoledì 1 luglio</p>
+        <p class="cta-prova__note">È uno dei primi gruppi: posti limitati, perché vogliamo seguirli bene.</p>
+        <a class="btn-wa wa-link" data-wa-msg="Ciao! Vorrei prenotare la prova gratuita di Cartapesta all'Open Day di mercoledì 1 luglio." href="https://wa.me/393501047318" target="_blank" rel="noopener">
+          <svg class="ico"><use href="#ico-wa"/></svg> Prenota la prova gratuita
         </a>
       </div>
     </div>
