@@ -144,8 +144,23 @@ h2.display{font-size:clamp(2rem,6.5vw,3.4rem);margin:.5rem 0 .9rem}
 .hero__content{position:relative;z-index:2}
 .hero__title{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.7rem,11vw,6rem);line-height:.92;margin:.7rem auto .9rem;max-width:13ch}
 .hero__title .g{color:var(--acido)}
-.hero__sub{font-size:1.05rem;color:rgba(251,247,238,.8);max-width:34ch;margin:0 auto 1.6rem}
+.hero__title a{color:inherit;text-decoration:none}
+.hero__sub{font-size:1.05rem;color:rgba(251,247,238,.8);max-width:34ch;margin:0 auto 1.1rem}
+.hero__hook{display:inline-block;text-decoration:none;margin:0 0 1.3rem;transition:transform .15s}
+.hero__hook:hover{transform:translateY(-1px)}
+.hero__hook span{display:inline-block;background:var(--acido);color:var(--ink);font-weight:700;font-size:.95rem;padding:.5rem 1.1rem;border-radius:100px;box-shadow:0 4px 18px rgba(200,242,17,.25)}
 .hero__sign{font-family:var(--mono);font-size:.82rem;color:rgba(251,247,238,.6);margin-top:.9rem}
+
+/* hero compatto su mobile: titolo + gancio + CTA sopra la piega */
+@media(max-width:600px){
+  .hero{padding:2.2rem 0 2rem}
+  .hero__title{font-size:clamp(2.4rem,12.5vw,3.4rem);margin:.5rem auto .7rem}
+  .hero__sub{font-size:.96rem;margin:0 auto .9rem}
+  .hero__hook{margin:0 0 1rem}
+  .hero__hook span{font-size:.9rem;padding:.45rem 1rem}
+  .hero__sign{font-size:.78rem;margin-top:.7rem}
+  .chips{padding:1.1rem .25rem .3rem;margin-top:.4rem}
+}
 
 /* chip nav corsi */
 .chips{
@@ -334,10 +349,11 @@ footer .socials{margin-top:.6rem;display:flex;gap:1.2rem;justify-content:center}
 
   <div class="wrap hero__content">
     <p class="eyebrow on-dark">CDG — Compagnia dei Giovani · Vent'anni di teatro</p>
-    <h1 class="hero__title">Un'<span class="g">estate</span> da <span class="g">costruire</span></h1>
+    <h1 class="hero__title"><a class="wa-link" data-wa-msg="Ciao! Vorrei informazioni sui laboratori teatrali e creativi della Compagnia dei Giovani." href="https://wa.me/393501047318" target="_blank" rel="noopener">Un'<span class="g">estate</span> da <span class="g">costruire</span></a></h1>
     <p class="hero__sub">Laboratori creativi e teatrali per bambini, ragazzi e adulti — San Giovanni La Punta</p>
-    <a class="btn-wa btn-wa--lg wa-link" href="https://wa.me/393501047318" target="_blank" rel="noopener">
-      <svg class="ico"><use href="#ico-wa"/></svg> Scrivici su WhatsApp
+    <a class="hero__hook wa-link" data-wa-msg="Ciao! Vorrei prenotare una prova gratuita ai laboratori dell'Open Day. Mi dite come fare?" href="https://wa.me/393501047318" target="_blank" rel="noopener"><span>Prova gratuita all'Open Day</span></a>
+    <a class="btn-wa btn-wa--lg wa-link" data-wa-msg="Ciao! Vorrei prenotare una prova gratuita ai laboratori dell'Open Day. Mi dite come fare?" href="https://wa.me/393501047318" target="_blank" rel="noopener">
+      <svg class="ico"><use href="#ico-wa"/></svg> Prenota una prova gratuita
     </a>
     <p class="hero__sign">Ti rispondiamo noi, Pietro e Salvo.</p>
 
